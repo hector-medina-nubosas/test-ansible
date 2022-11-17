@@ -14,11 +14,10 @@
 #
 #
 ---
-
-- hosts: localhost
-  tasks:
-
-    - name: Update and upgrade apt packages
-      become: true
-      apt:
-        upgrade: yes
+  - name: Update and upgrade apt packages
+    become: true
+    apt:
+      upgrade: yes
+  - name: print variables
+    ansible.builtin.debug:
+      msg: "Hola!!!!"

@@ -21,3 +21,6 @@
   - name: print variables
     ansible.builtin.debug:
       msg: "Hola!!!!"
+  - name: print variables
+    ansible.builtin.debug:
+      msg: "Adios!!!!"

@@ -16,27 +16,6 @@
 ---
 
 - hosts: localhost
-  remote_user: root
-
-  vars:
-
-    # schedule is fed directly to cron
-    schedule: '*/1 * * * *'
-
-    # User to run ansible-pull as from cron
-    cron_user: root
-
-    # File that ansible will use for logs
-    logfile: /var/log/ansible-pull.log
-
-    # Directory to where repository will be cloned
-    workdir: /var/lib/ansible/local
-
-    # Repository to check out -- YOU MUST CHANGE THIS
-    # repo must contain a local.yml file at top level
-    #repo_url: git://github.com/sfromm/ansible-playbooks.git
-    repo_url: https://github.com/hector-medina-nubosas/test-ansible
-
   tasks:
 
     - name: Update and upgrade apt packages
